@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HC Writer — Senior Ghostwriter & Content Strategist</title>
+  <meta name="description" content="Howard Carder II — Senior ghostwriter and content strategist specializing in security technology and professional AV. 30+ years of experience.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; color: #1a1f2e; background: #FAFAF7; font-size: 15px; line-height: 1.6; }
+
+    /* NAV */
+    .hc-nav { display: flex; align-items: center; justify-content: space-between; padding: 18px 36px; background: #FAFAF7; border-bottom: 1px solid #e8e5de; position: sticky; top: 0; z-index: 100; }
+    .hc-logo a { font-family: 'Libre Baskerville', serif; font-size: 17px; font-weight: 700; color: #1a1f2e; letter-spacing: 0.02em; text-decoration: none; }
+    .hc-logo span { color: #C2853A; }
+    .hc-nav-links { display: flex; gap: 24px; list-style: none; align-items: center; }
+    .hc-nav-links a { font-size: 12px; font-weight: 500; color: #4a5068; text-decoration: none; letter-spacing: 0.05em; text-transform: uppercase; }
+    .hc-nav-cta { font-size: 12px !important; font-weight: 500 !important; padding: 8px 18px; background: #1a1f2e; color: #FAFAF7 !important; border-radius: 4px; text-decoration: none; letter-spacing: 0.05em; text-transform: uppercase; }
+
+    /* HERO */
+    .hc-hero { padding: 72px 36px 64px; }
+    .hc-eyebrow { font-size: 11px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #C2853A; margin-bottom: 20px; }
+    .hc-hero h1 { font-family: 'Libre Baskerville', serif; font-size: 44px; font-weight: 700; line-height: 1.18; color: #1a1f2e; margin-bottom: 22px; max-width: 660px; }
+    .hc-hero h1 em { font-style: italic; color: #C2853A; }
+    .hc-hero-sub { font-size: 17px; font-weight: 300; line-height: 1.75; color: #4a5068; max-width: 600px; margin-bottom: 36px; }
+    .hc-hero-actions { display: flex; gap: 14px; align-items: center; }
+    .hc-btn-primary { padding: 12px 26px; background: #1a1f2e; color: #FAFAF7; border-radius: 4px; text-decoration: none; font-size: 14px; font-weight: 500; letter-spacing: 0.03em; }
+    .hc-btn-secondary { padding: 12px 26px; border: 1.5px solid #c5c1b8; color: #1a1f2e; border-radius: 4px; text-decoration: none; font-size: 14px; font-weight: 500; letter-spacing: 0.03em; }
+    .hc-divider { border: none; border-top: 1px solid #e8e5de; margin: 0 36px; }
+
+    /* WHAT I WRITE */
+    .hc-section { padding: 52px 36px; }
+    .hc-section-label { font-size: 11px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #9a97a0; margin-bottom: 6px; }
+    .hc-section-intro { font-size: 15px; color: #6b6e7e; max-width: 560px; margin-bottom: 32px; line-height: 1.6; }
+    .hc-specialties { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    .hc-specialty-card { padding: 30px 24px; border: 1px solid #e8e5de; border-radius: 6px; background: #fff; position: relative; }
+    .hc-specialty-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; border-radius: 6px 6px 0 0; }
+    .hc-card-case::before { background: #1a1f2e; }
+    .hc-card-leadership::before { background: #C2853A; }
+    .hc-card-tech::before { background: #5a7fa8; }
+    .hc-format-label { font-size: 10px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 14px; display: block; }
+    .hc-card-case .hc-format-label { color: #1a1f2e; }
+    .hc-card-leadership .hc-format-label { color: #C2853A; }
+    .hc-card-tech .hc-format-label { color: #5a7fa8; }
+    .hc-specialty-card h3 { font-family: 'Libre Baskerville', serif; font-size: 15px; font-weight: 700; margin-bottom: 12px; color: #1a1f2e; line-height: 1.35; }
+    .hc-specialty-card p { font-size: 13px; color: #6b6e7e; line-height: 1.65; }
+    .hc-card-footer { margin-top: 18px; padding-top: 14px; border-top: 1px solid #f0ede6; font-size: 11px; color: #a0a3b0; font-style: italic; }
+
+    /* ABOUT STRIP */
+    .hc-about { padding: 56px 36px; background: #1a1f2e; display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+    .hc-about-text h2 { font-family: 'Libre Baskerville', serif; font-size: 28px; font-weight: 700; color: #FAFAF7; line-height: 1.3; margin-bottom: 18px; }
+    .hc-about-text h2 em { font-style: italic; color: #C2853A; }
+    .hc-about-text p { font-size: 15px; font-weight: 300; line-height: 1.8; color: #b8bccc; margin-bottom: 26px; }
+    .hc-btn-ghost { display: inline-block; padding: 10px 22px; border: 1.5px solid #4a5068; color: #FAFAF7; border-radius: 4px; text-decoration: none; font-size: 13px; font-weight: 500; letter-spacing: 0.04em; }
+    .hc-credentials { display: flex; flex-direction: column; gap: 16px; }
+    .hc-cred-item { display: flex; align-items: flex-start; gap: 14px; padding: 20px 22px; border: 1px solid #2e3347; border-radius: 6px; }
+    .hc-cred-num { font-family: 'Libre Baskerville', serif; font-size: 28px; font-weight: 700; color: #C2853A; line-height: 1; min-width: 52px; }
+    .hc-cred-label { font-size: 14px; color: #b8bccc; line-height: 1.5; padding-top: 3px; }
+    .hc-cred-label strong { color: #FAFAF7; font-weight: 500; display: block; margin-bottom: 3px; }
+
+    /* WORK SAMPLES */
+    .hc-work { padding: 52px 36px; }
+    .hc-work-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 26px; }
+    .hc-work-header a { font-size: 13px; color: #C2853A; text-decoration: none; }
+    .hc-samples { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .hc-sample { padding: 22px 20px; border: 1px solid #e8e5de; border-radius: 6px; background: #fff; display: flex; flex-direction: column; }
+    .hc-sample-tag { display: inline-block; font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 3px 9px; border-radius: 3px; margin-bottom: 14px; align-self: flex-start; }
+    .hc-tag-case { background: #edf0f5; color: #1a1f2e; }
+    .hc-tag-leadership { background: #fdf3e6; color: #8a5e1a; }
+    .hc-tag-press { background: #eaf0f7; color: #2c5278; }
+    .hc-sample h4 { font-family: 'Libre Baskerville', serif; font-size: 14px; font-weight: 700; color: #1a1f2e; line-height: 1.45; margin-bottom: 10px; }
+    .hc-sample p { font-size: 13px; color: #8a8d9a; line-height: 1.6; flex: 1; }
+    .hc-sample-pub { margin-top: 14px; font-size: 12px; color: #b0b2bc; font-style: italic; }
+    .hc-read-link { display: inline-block; margin-top: 12px; font-size: 12px; color: #C2853A; text-decoration: none; font-weight: 500; }
+
+    /* CTA BAR */
+    .hc-cta-bar { padding: 52px 36px; background: #f5f3ec; display: flex; align-items: center; justify-content: space-between; border-top: 1px solid #e8e5de; }
+    .hc-cta-bar h2 { font-family: 'Libre Baskerville', serif; font-size: 24px; color: #1a1f2e; max-width: 380px; line-height: 1.35; }
+    .hc-cta-bar h2 em { font-style: italic; color: #C2853A; }
+    .hc-contact-info { text-align: right; }
+    .hc-contact-info p { font-size: 14px; color: #6b6e7e; margin-bottom: 6px; }
+    .hc-contact-info a { color: #C2853A; text-decoration: none; font-weight: 500; }
+    .hc-name { font-family: 'Libre Baskerville', serif; font-size: 15px; font-weight: 700; color: #1a1f2e; margin-bottom: 10px; }
+
+    /* FOOTER */
+    .hc-footer { padding: 18px 36px; background: #1a1f2e; display: flex; justify-content: space-between; align-items: center; }
+    .hc-footer p { font-size: 12px; color: #5c6078; }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .hc-nav { padding: 14px 20px; }
+      .hc-nav-links { gap: 14px; }
+      .hc-hero { padding: 48px 20px 40px; }
+      .hc-hero h1 { font-size: 32px; }
+      .hc-specialties { grid-template-columns: 1fr; }
+      .hc-about { grid-template-columns: 1fr; padding: 40px 20px; }
+      .hc-samples { grid-template-columns: 1fr; }
+      .hc-cta-bar { flex-direction: column; gap: 24px; text-align: center; padding: 40px 20px; }
+      .hc-contact-info { text-align: center; }
+      .hc-section { padding: 40px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="hc-nav">
+    <div class="hc-logo"><a href="index.html">HC<span>Writer</span></a></div>
+    <ul class="hc-nav-links">
+      <li><a href="services.html">Services</a></li>
+      <li><a href="work.html">Work</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a class="hc-nav-cta" href="contact.html">Let's Talk</a></li>
+    </ul>
+  </nav>
+
+  <section class="hc-hero">
+    <p class="hc-eyebrow">Senior Ghostwriter &amp; Content Strategist</p>
+    <h1>Where deep <em>expertise</em> meets compelling storytelling</h1>
+    <p class="hc-hero-sub">30+ years writing for the security technology and professional AV industries — bylined articles, thought leadership, case studies, and marketing content for companies and publications that demand real industry depth.</p>
+    <div class="hc-hero-actions">
+      <a href="work.html" class="hc-btn-primary">View My Work</a>
+      <a href="contact.html" class="hc-btn-secondary">Let's Connect</a>
+    </div>
+  </section>
+
+  <hr class="hc-divider">
+
+  <section class="hc-section">
+    <p class="hc-section-label">What I Write</p>
+    <p class="hc-section-intro">From immersive case studies to executive bylines to deep technical features — across security technology, professional AV, and beyond.</p>
+    <div class="hc-specialties">
+      <div class="hc-specialty-card hc-card-case">
+        <span class="hc-format-label">Installation Case Studies</span>
+        <h3>Stories that show your solution working in the real world</h3>
+        <p>I interview stakeholders, extract the insight, and build a narrative that's genuinely useful to your prospects — not a press release dressed up as a story.</p>
+        <p class="hc-card-footer">Security tech · Pro AV · Enterprise technology</p>
+      </div>
+      <div class="hc-specialty-card hc-card-leadership">
+        <span class="hc-format-label">Thought Leadership Articles</span>
+        <h3>Executive voice articles that earn attention in the trade press</h3>
+        <p>I work directly with executives and subject matter experts to draw out their genuine insights, expertise, and passion for the topic — then craft the piece that captures their voice and delivers something truly valuable to their readers.</p>
+        <p class="hc-card-footer">Bylined articles · Op-eds · Industry roundtables</p>
+      </div>
+      <div class="hc-specialty-card hc-card-tech">
+        <span class="hc-format-label">Technology Features</span>
+        <h3>Technical depth that doesn't lose the non-technical reader</h3>
+        <p>25+ years in complex technology industries means I can go deep on VSaaS, AI/ML analytics, networked audio, and AV integration — without writing past your audience.</p>
+        <p class="hc-card-footer">Trade press · White papers · Product content</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="hc-about">
+    <div class="hc-about-text">
+      <h2>The writer who <em>actually knows</em> your industry</h2>
+      <p>Long before I became a writer, I was a working musician and MIDI systems specialist selling and teaching digital instruments and connectivity in the early days of networked audio. That understanding of analog and digital signal networks led directly to my first writing role at Pelco, one of the industry's leading video security companies. I've been writing at the intersection of technology and craft ever since.</p>
+      <a href="about.html" class="hc-btn-ghost">Read My Story</a>
+    </div>
+    <div class="hc-credentials">
+      <div class="hc-cred-item">
+        <div class="hc-cred-num">30+</div>
+        <div class="hc-cred-label"><strong>Years of experience</strong>Senior ghostwriter and content strategist</div>
+      </div>
+      <div class="hc-cred-item">
+        <div class="hc-cred-num">25+</div>
+        <div class="hc-cred-label"><strong>Years in security tech</strong>Case studies, trade press, thought leadership</div>
+      </div>
+      <div class="hc-cred-item">
+        <div class="hc-cred-num">♪</div>
+        <div class="hc-cred-label"><strong>Still on stage</strong>Active performing bassist in Portland, OR — and a veteran of large-scale live event production featuring prominent national performers</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hc-work">
+    <div class="hc-work-header">
+      <p class="hc-section-label">Featured Work</p>
+      <a href="work.html">View all samples →</a>
+    </div>
+    <div class="hc-samples">
+      <div class="hc-sample">
+        <span class="hc-sample-tag hc-tag-case">Case Study</span>
+        <h4>The University of Arizona May Be Setting a New Industry Trend in Campus Security</h4>
+        <p>How one major university is reshaping campus security strategy — and setting a model for institutions nationwide.</p>
+        <p class="hc-sample-pub">Security InfoWatch</p>
+        <a class="hc-read-link" href="https://www.securityinfowatch.com/school-security/article/55305202/the-university-of-arizona-may-be-setting-a-new-industry-trend-in-campus-security" target="_blank">Read article →</a>
+      </div>
+      <div class="hc-sample">
+        <span class="hc-sample-tag hc-tag-leadership">Thought Leadership</span>
+        <h4>The Moment Workplace Incivility Became a Critical Threat Assessment Priority</h4>
+        <p>An executive-perspective article on how workplace culture has become an essential lens for security professionals.</p>
+        <p class="hc-sample-pub">Security InfoWatch</p>
+        <a class="hc-read-link" href="https://www.securityinfowatch.com/security-executives/article/55356303/the-moment-workplace-incivility-became-a-critical-threat-assessment-priority" target="_blank">Read article →</a>
+      </div>
+      <div class="hc-sample">
+        <span class="hc-sample-tag hc-tag-press">Tech Press Release</span>
+        <h4>Milestone Systems Strengthens Security Operations with XProtect 2026 R1 and Arcules Updates</h4>
+        <p>Expanded cloud capabilities and security operations enhancements for a global video management software leader.</p>
+        <p class="hc-sample-pub">Milestone Systems</p>
+        <a class="hc-read-link" href="https://www.milestonesys.com/company/news/press-releases/2026-r1-and-arcules-updates/" target="_blank">Read release →</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="hc-cta-bar">
+    <h2>Ready to work with a writer who <em>knows the room?</em></h2>
+    <div class="hc-contact-info">
+      <p class="hc-name">Howard Carder II</p>
+      <p><a href="mailto:howardlcarder@gmail.com">howardlcarder@gmail.com</a></p>
+      <p><a href="tel:5039615722">503-961-5722</a></p>
+      <p><a href="https://www.linkedin.com/in/hcarder/" target="_blank">LinkedIn ↗</a></p>
+    </div>
+  </div>
+
+  <footer class="hc-footer">
+    <p>© 2026 HC Writer. Portland, Oregon.</p>
+  </footer>
+
+</body>
+</html>

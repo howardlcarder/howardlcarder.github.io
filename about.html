@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — HC Writer</title>
+  <meta name="description" content="Howard Carder II — 30+ years as a ghostwriter and content strategist for security technology and professional AV. Based in Portland, Oregon.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'DM Sans', sans-serif; color: #1a1f2e; background: #FAFAF7; font-size: 15px; line-height: 1.6; }
+    .hc-nav { display: flex; align-items: center; justify-content: space-between; padding: 18px 36px; background: #FAFAF7; border-bottom: 1px solid #e8e5de; position: sticky; top: 0; z-index: 100; }
+    .hc-logo a { font-family: 'Libre Baskerville', serif; font-size: 17px; font-weight: 700; color: #1a1f2e; letter-spacing: 0.02em; text-decoration: none; }
+    .hc-logo span { color: #C2853A; }
+    .hc-nav-links { display: flex; gap: 24px; list-style: none; align-items: center; }
+    .hc-nav-links a { font-size: 12px; font-weight: 500; color: #4a5068; text-decoration: none; letter-spacing: 0.05em; text-transform: uppercase; }
+    .hc-nav-cta { font-size: 12px !important; font-weight: 500 !important; padding: 8px 18px; background: #1a1f2e; color: #FAFAF7 !important; border-radius: 4px; letter-spacing: 0.05em; text-transform: uppercase; }
+    .hc-page-hero { padding: 56px 36px 48px; border-bottom: 1px solid #e8e5de; }
+    .hc-eyebrow { font-size: 11px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #C2853A; margin-bottom: 16px; }
+    .hc-page-hero h1 { font-family: 'Libre Baskerville', serif; font-size: 38px; font-weight: 700; line-height: 1.2; color: #1a1f2e; margin-bottom: 18px; max-width: 640px; }
+    .hc-page-hero h1 em { font-style: italic; color: #C2853A; }
+    .hc-page-hero p { font-size: 16px; font-weight: 300; line-height: 1.8; color: #4a5068; max-width: 680px; margin-bottom: 14px; }
+    .hc-page-hero p:last-child { margin-bottom: 0; }
+    .hc-about-body { padding: 56px 36px; display: grid; grid-template-columns: 3fr 2fr; gap: 56px; align-items: start; }
+    .hc-story p { font-size: 15px; font-weight: 300; line-height: 1.9; color: #4a5068; margin-bottom: 24px; }
+    .hc-story p:last-child { margin-bottom: 0; }
+    .hc-aside { display: flex; flex-direction: column; gap: 28px; }
+    .hc-aside-label { font-size: 10px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #9a97a0; margin-bottom: 14px; }
+    .hc-credentials { display: flex; flex-direction: column; gap: 12px; }
+    .hc-cred-item { display: flex; align-items: flex-start; gap: 14px; padding: 16px 18px; border: 1px solid #e8e5de; border-radius: 6px; background: #fff; }
+    .hc-cred-num { font-family: 'Libre Baskerville', serif; font-size: 24px; font-weight: 700; color: #C2853A; line-height: 1; min-width: 44px; }
+    .hc-cred-label { font-size: 13px; color: #6b6e7e; line-height: 1.4; padding-top: 2px; }
+    .hc-cred-label strong { color: #1a1f2e; font-weight: 600; display: block; margin-bottom: 2px; }
+    .hc-bg-list { display: flex; flex-direction: column; gap: 10px; }
+    .hc-bg-list-item { padding: 14px 16px; background: #fff; border: 1px solid #e8e5de; border-radius: 6px; }
+    .hc-bg-list-item h4 { font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #C2853A; margin-bottom: 5px; }
+    .hc-bg-list-item p { font-size: 13px; color: #6b6e7e; line-height: 1.5; }
+    .hc-cta-bar { padding: 52px 36px; background: #1a1f2e; display: flex; align-items: center; justify-content: space-between; }
+    .hc-cta-bar h2 { font-family: 'Libre Baskerville', serif; font-size: 24px; color: #FAFAF7; max-width: 420px; line-height: 1.35; }
+    .hc-cta-bar h2 em { font-style: italic; color: #C2853A; }
+    .hc-contact-info { text-align: right; }
+    .hc-contact-info p { font-size: 14px; color: #7a8090; margin-bottom: 6px; }
+    .hc-contact-info a { color: #C2853A; text-decoration: none; font-weight: 500; }
+    .hc-name { font-family: 'Libre Baskerville', serif; font-size: 15px; font-weight: 700; color: #FAFAF7 !important; margin-bottom: 10px; }
+    .hc-footer { padding: 18px 36px; background: #1a1f2e; border-top: 1px solid #2e3347; display: flex; justify-content: space-between; }
+    .hc-footer p { font-size: 12px; color: #5c6078; }
+    @media (max-width: 768px) {
+      .hc-nav { padding: 14px 20px; }
+      .hc-page-hero { padding: 40px 20px 32px; }
+      .hc-page-hero h1 { font-size: 30px; }
+      .hc-about-body { grid-template-columns: 1fr; padding: 40px 20px; gap: 32px; }
+      .hc-cta-bar { flex-direction: column; gap: 24px; text-align: center; padding: 40px 20px; }
+      .hc-contact-info { text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="hc-nav">
+    <div class="hc-logo"><a href="index.html">HC<span>Writer</span></a></div>
+    <ul class="hc-nav-links">
+      <li><a href="services.html">Services</a></li>
+      <li><a href="work.html">Work</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a class="hc-nav-cta" href="contact.html">Let's Talk</a></li>
+    </ul>
+  </nav>
+
+  <div class="hc-page-hero">
+    <p class="hc-eyebrow">About</p>
+    <h1>The writer who <em>already knows</em> your industry</h1>
+    <p>I'm a senior ghostwriter and content strategist with more than 30 years of experience helping technology companies and trade publications say the right thing to the right audience — clearly, credibly, and in a voice that sounds like them.</p>
+    <p>My work spans security technology, professional AV, and enterprise markets. Most of it never has my name on it. That's the job — and I'm good at it.</p>
+  </div>
+
+  <div class="hc-about-body">
+    <div class="hc-story">
+      <p>Long before I became a writer, I was a working musician and MIDI systems specialist — selling and teaching digital instruments and signal connectivity at a time when networked audio was still finding its footing. That hands-on understanding of analog and digital systems led directly to my first writing role at Pelco, then one of the world's leading video security companies.</p>
+      <p>At Pelco I spent more than 20 years building and leading a global marketing communications group — writing and editing everything from product catalogs and trade press to executive speeches and a 45,000-circulation company magazine. I also helped conceive and produce the company's large-scale annual customer events, which featured headline performers including Ray Charles, BB King, and Chicago.</p>
+      <p>Since 2022 I've worked independently — ghostwriting bylined articles, case studies, thought leadership, and marketing content for agencies, technology companies, and trade publications that need a writer who already knows the territory.</p>
+    </div>
+
+    <div class="hc-aside">
+      <div>
+        <p class="hc-aside-label">At a Glance</p>
+        <div class="hc-credentials">
+          <div class="hc-cred-item">
+            <div class="hc-cred-num">30+</div>
+            <div class="hc-cred-label"><strong>Years of experience</strong>Senior ghostwriter and content strategist</div>
+          </div>
+          <div class="hc-cred-item">
+            <div class="hc-cred-num">20+</div>
+            <div class="hc-cred-label"><strong>Years at Pelco</strong>Global marketing communications leader</div>
+          </div>
+          <div class="hc-cred-item">
+            <div class="hc-cred-num">♪</div>
+            <div class="hc-cred-label"><strong>Still on stage</strong>Active performing bassist in Portland, OR</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <p class="hc-aside-label">Background</p>
+        <div class="hc-bg-list">
+          <div class="hc-bg-list-item">
+            <h4>Education</h4>
+            <p>BA, English/Creative Writing — California State University, Fresno</p>
+          </div>
+          <div class="hc-bg-list-item">
+            <h4>Industries</h4>
+            <p>Security technology · Professional AV · Enterprise technology · Smart buildings · IoT</p>
+          </div>
+          <div class="hc-bg-list-item">
+            <h4>Location</h4>
+            <p>Portland, Oregon — working with clients across North America and internationally</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hc-cta-bar">
+    <h2><em>If that sounds like the writer you've been looking for</em> — let's talk.</h2>
+    <div class="hc-contact-info">
+      <p class="hc-name">Howard Carder II</p>
+      <p><a href="mailto:howardlcarder@gmail.com">howardlcarder@gmail.com</a></p>
+      <p><a href="tel:5039615722">503-961-5722</a></p>
+      <p><a href="https://www.linkedin.com/in/hcarder/" target="_blank">LinkedIn ↗</a></p>
+    </div>
+  </div>
+
+  <footer class="hc-footer">
+    <p>© 2026 HC Writer. Portland, Oregon.</p>
+  </footer>
+
+</body>
+</html>
